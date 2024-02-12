@@ -46,3 +46,36 @@ ${enter}`;
 const gameOver5 = `You looked at the trap and the light BLINDED YOU! ${gameOver}`;
 
 const win = `The ghost trap sucked Slimer in and closed. CONGRATULATIONS! YOU CAUGHT SLIMER!!!`;
+
+// Alerts the user to start the game
+alert (start);
+
+// NESTED CONDITIONAL STATEMENTS
+// sets the value of userInput to the user's entry
+let userInput = prompt (q1);
+// NOTE: prompts return the value entered as a string. That is whu double equals is used instead of triple equals
+if (userInput == 1) {  
+    userInput = prompt (q2);
+    if (userInput == 1) {
+        userInput = prompt(q3);
+        if (userInput == 2) {
+            userInput = prompt (q4);
+            if (userInput == 1) {
+                userInput =prompt (q5)
+                if (userInput == 2) {
+                    alert (win)
+                }else {
+                    alert (gameOver5)
+                }
+            }else {
+                alert (gameOver4);
+            }
+        }else {
+            alert (gameOver3);
+        }
+    }else {
+        alert (gameOver2);
+    }
+}else {
+    alert(gameOver1)
+};
